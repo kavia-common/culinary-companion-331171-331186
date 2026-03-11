@@ -2,6 +2,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Configure API base URL (required for full app)
+
+This frontend calls the backend REST API using an environment variable:
+
+- `NEXT_PUBLIC_API_BASE_URL` (example: `http://localhost:8000`)
+
+Notes:
+- The app expects the backend to serve routes at the root (e.g. `/recipes`, `/auth/login`, `/shopping-list`).
+- In production, set `NEXT_PUBLIC_API_BASE_URL` to your deployed backend origin.
+- The UI footer prints the resolved API base URL to help debug environment wiring.
+
 First, run the development server:
 
 ```bash
