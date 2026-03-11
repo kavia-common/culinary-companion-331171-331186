@@ -1,14 +1,15 @@
-import React from "react";
+import Link from "next/link";
+import { Button, Card, SectionTitle } from "@/components/ui";
 
 export default function NotFound() {
   return (
-    <main className="app-container">
-      <section className="card" role="alert" aria-live="assertive">
-        <header className="header">
-          <h1 className="title">404 – Page Not Found</h1>
-          <p className="subtitle">The page you’re looking for doesn’t exist.</p>
-        </header>
-      </section>
-    </main>
+    <div className="mx-auto max-w-xl">
+      <SectionTitle title="404 – Page Not Found" subtitle="The page you’re looking for doesn’t exist." />
+      <Card className="p-4">
+        <Link href="/">
+          <Button>Back to browse</Button>
+        </Link>
+      </Card>
+    </div>
   );
 }

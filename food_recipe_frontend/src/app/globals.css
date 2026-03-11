@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  color-scheme: light;
+
+  --cc-bg: #f9fafb;
+  --cc-surface: #ffffff;
+  --cc-text: #111827;
+  --cc-muted: #64748b;
+  --cc-primary: #3b82f6;
+  --cc-success: #06b6d4;
+  --cc-error: #ef4444;
 }
 
 * {
@@ -17,10 +22,20 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background: var(--cc-bg);
+  color: var(--cc-text);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
 }
